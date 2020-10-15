@@ -40,6 +40,9 @@ module.exports = {
       ".woff2",
       ".eot",
     ],
+    alias: {
+      '&img': path.resolve(process.cwd(), "./src/img")
+    }
   },
   module: {
     rules: [

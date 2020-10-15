@@ -17,13 +17,13 @@ Dark green: #28b485
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%;
+  font-size: 62.5%; // 10/16 = 0.625 * 100% = 62.5%
 }
 
 body {
   font-family: "lato", sans-serif;
   font-weight: 400;
-  font-size: 1.6rem;
+  // font-size: 1.6rem;
   line-height: 1.7;
   color: #777;
   padding: 3rem;
@@ -42,25 +42,25 @@ body {
   position: relative;
 
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-}
 
-.logo {
-  height: 3.5rem;
+  &__logo {
+    height: 3.5rem;
 
-  &-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem;
+    &-box {
+      position: absolute;
+      top: 4rem;
+      left: 4rem;
+    }
   }
-}
 
-.text-box {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  &__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
-  text-align: center;
+    text-align: center;
+  }
 }
 
 .heading-primary {
@@ -70,7 +70,7 @@ body {
   backface-visibility: hidden;
   margin-bottom: 6rem;
 
-  &-main {
+  &--main {
     display: block;
     font-size: 6rem;
     font-weight: 400;
@@ -81,7 +81,7 @@ body {
     animation-timing-function: ease-out;
   }
 
-  &-sub {
+  &--sub {
     display: block;
     font-size: 2rem;
     font-weight: 700;
@@ -94,11 +94,11 @@ body {
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateX(-10rem);
   }
 
   80% {
-    transform: translateX(10px);
+    transform: translateX(1rem);
   }
 
   100% {
@@ -110,11 +110,11 @@ body {
 @keyframes moveInRight {
   0% {
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateX(10rem);
   }
 
   80% {
-    transform: translateX(-10px);
+    transform: translateX(-1rem);
   }
 
   100% {
@@ -126,7 +126,7 @@ body {
 @keyframes moveInBottom {
   0% {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(3rem);
   }
 
   100% {
@@ -145,8 +145,9 @@ body {
     border-radius: 100px;
     transition: all 0.2s;
     position: relative;
+    font-size: 1.6rem;
   }
-  &-white {
+  &--white {
     background-color: #fff;
     color: #777;
   }
@@ -174,7 +175,7 @@ body {
     transition: all 0.4s;
   }
 
-  &-white::after {
+  &--white::after {
     background-color: white;
   }
 
@@ -183,7 +184,7 @@ body {
     opacity: 0;
   }
 
-  &-animated {
+  &--animated {
     animation: moveInBottom 0.5s ease-out 0.75s;
     animation-fill-mode: backwards;
   }
