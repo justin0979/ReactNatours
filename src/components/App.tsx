@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Header } from "./Header";
+import { About } from "./sections/About";
 
 interface Content {
   h1: string;
@@ -22,6 +23,9 @@ export const App = (): JSX.Element => {
   return (
     <Router>
       <Header />
+      <main>
+        <About />
+      </main>
     </Router>
   );
 };
