@@ -14,13 +14,25 @@ export class Features extends React.Component {
             />
           </div>
           <div className="col-1-of-4">
-            <Card class="" heading="" text="" />
+            <Card
+              class="icon-basic-compass"
+              heading="Meet Nature"
+              text="lorem ipsum dolor sit amet consuctetur, adipisicing elit. Ok, how is this for the text?"
+            />
           </div>
           <div className="col-1-of-4">
-            <Card />
+            <Card
+              class="icon-basic-map"
+              heading="Find Your way"
+              text="lorem ipsum dolor sit amet consuctetur, adipisicing elit. Ok, how is this for the text?"
+            />
           </div>
           <div className="col-1-of-4">
-            <Card />
+            <Card
+              class="icon-basic-heart"
+              heading="Live a Healthier Life"
+              text="lorem ipsum dolor sit amet consuctetur, adipisicing elit. Ok, how is this for the text?"
+            />
           </div>
         </div>
       </section>
