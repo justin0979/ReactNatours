@@ -7,14 +7,14 @@ import nat3 from "&img/nat-3-large";
 export class About extends React.Component {
   render(): JSX.Element {
     return (
-      <section className="section-about">
+      <section id="section-about" className="section-about">
         <div className="u-center-text u-margin-bottom-big">
           <h2 className="heading-secondary">
             Exciting tours for adventurous people
           </h2>
         </div>
         <div className="row">
-          <div id="section-about" className="col-1-of-2">
+          <div className="col-1-of-2">
             <h3 className="heading-tertiary u-margin-bottom-small">
               You're going to fall in love with nature
             </h3>
@@ -35,7 +35,7 @@ export class About extends React.Component {
             <Button
               class="btn-text"
               label="Learn More &rarr;"
-              to=""
+              to="#section-features"
             />
           </div>
           <div className="col-1-of-2">
