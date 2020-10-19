@@ -25,6 +25,7 @@ module.exports = {
           "&img": "./src/img",
           "&sass": "./src/sass",
           "#test": "./test",
+          "&tools": "./src/components/tools",
         },
       },
     ],
