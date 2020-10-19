@@ -1,5 +1,5 @@
 import React from "react";
-import logoWhite from "&img/logo-white";
+import logoWhite from "&img/logo-white.png";
 import { Button } from "&components/Button";
 
 export class Header extends React.Component {
