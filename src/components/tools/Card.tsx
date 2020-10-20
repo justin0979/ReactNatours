@@ -1,19 +1,28 @@
 import * as React from "react";
 
 export interface CardProps {
-  text: string;
-  class: string;
+  class: {
+    side: string;
+    cardPicture: string;
+  };
+  picture: string;
+  heading: string;
+  details: string;
 }
 
 export const Card = (props: CardProps): JSX.Element => {
   return (
     <div className="card">
       <div className="card__side card__side--front">
-        {props.text} front
+        <div
+          className={`card__picture ${props.class.cardPicture}`}
+        ></div>
+        <div className="card__heading"></div>
+        <div className="card__details"></div>
       </div>
-      <div className={`card__side card__side--back ${props.class}`}>
-        {props.text} back
-      </div>
+      <div
+        className={`card__side card__side--back ${props.class.side}`}
+      ></div>
     </div>
   );
 };

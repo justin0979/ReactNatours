@@ -9,13 +9,37 @@ export const Tours = (): JSX.Element => {
       </div>
       <div className="row">
         <div className="col-1-of-3">
-          <Card text="text" class="card__side--back-1" />
+          <Card
+            class={{
+              side: "card__side--back-1",
+              cardPicture: "card__picture--1",
+            }}
+            picture=""
+            heading="Heading"
+            details="Details"
+          />
         </div>
         <div className="col-1-of-3">
-          <Card text="text" class="card__side--back-2" />
+          <Card
+            class={{
+              side: "card__side--back-2",
+              cardPicture: "card__picture--2",
+            }}
+            picture=""
+            heading=""
+            details=""
+          />
         </div>
         <div className="col-1-of-3">
-          <Card text="text" class="card__side--back-3" />
+          <Card
+            class={{
+              side: "card__side--back-3",
+              cardPicture: "card__picture--3",
+            }}
+            picture=""
+            heading=""
+            details=""
+          />
         </div>
       </div>
     </section>
