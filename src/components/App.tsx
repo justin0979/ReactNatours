@@ -1,8 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Header } from "./Header";
-import { About } from "./sections/About";
-import { Features } from "./sections/Features";
+import { About } from "&sections/About";
+import { Features } from "&sections/Features";
+import { Tours } from "&sections/Tours";
 
 interface Content {
   h1: string;
@@ -27,6 +28,7 @@ export const App = (): JSX.Element => {
       <main>
         <About />
         <Features />
+        <Tours />
       </main>
     </Router>
   );
