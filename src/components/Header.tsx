@@ -5,7 +5,7 @@ import { Button } from "&components/Button";
 export class Header extends React.Component {
   render(): JSX.Element {
     return (
-      <header className="header">
+      <header id="header" className="header">
         <div className="header__logo-box">
           <img
             src={logoWhite}
