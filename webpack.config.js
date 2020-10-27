@@ -41,8 +41,8 @@ module.exports = {
       ".eot",
     ],
     alias: {
-      '&img': path.resolve(process.cwd(), "./src/img")
-    }
+      "&img": path.resolve(process.cwd(), "./src/img"),
+    },
   },
   module: {
     rules: [
@@ -65,7 +65,7 @@ module.exports = {
         use: "html-loader",
       },
       {
-        test: /\.(jpe?g|png|gif|svg|ttf|woff(2)?|eot)$/,
+        test: /\.(jpe?g|png|gif|svg|ttf|woff(2)?|mp4|webm|eot)$/,
         use: [
           {
             loader: "file-loader",
