@@ -4,6 +4,7 @@ import { Header } from "./Header";
 import { About } from "&sections/About";
 import { Features } from "&sections/Features";
 import { Tours } from "&sections/Tours";
+import { Stories } from "&sections/Stories/Stories";
 
 interface Content {
   h1: string;
@@ -29,6 +30,7 @@ export const App = (): JSX.Element => {
         <About />
         <Features />
         <Tours />
+        <Stories />
       </main>
     </Router>
   );

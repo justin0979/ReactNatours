@@ -69,7 +69,7 @@ export const Tours = (): JSX.Element => {
       </div>
       <div className="u-center-text u-margin-top-huge">
         <Button
-          to="#tours"
+          to="#section-stories"
           label="Dicover all tours"
           class="btn btn--green"
         />
