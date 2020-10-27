@@ -1,11 +1,13 @@
 import * as React from "react";
 
-interface VideoProps {
+interface VideoBackgroundProps {
   sourceMP4?: any;
   sourceWEBM?: any;
 }
 
-export const Video = (props: VideoProps): JSX.Element => {
+export const VideoBackground = (
+  props: VideoBackgroundProps
+): JSX.Element => {
   const videoTypes = (): JSX.Element => {
     if (props.sourceMP4 && props.sourceWEBM) {
       return (
