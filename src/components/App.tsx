@@ -5,6 +5,7 @@ import { About } from "&sections/About";
 import { Features } from "&sections/Features";
 import { Tours } from "&sections/Tours";
 import { Stories } from "&sections/Stories/Stories";
+import { Booking } from "&sections/Booking";
 
 interface Content {
   h1: string;
@@ -31,6 +32,7 @@ export const App = (): JSX.Element => {
         <Features />
         <Tours />
         <Stories />
+        <Booking />
       </main>
     </Router>
   );

@@ -2,6 +2,7 @@ import * as React from "react";
 import { StoryCard } from "./StoryCard";
 import { Button } from "&components/Button";
 import { VideoBackground } from "&tools/VideoBackground";
+import { Heading } from "&tools/Heading";
 import nat8 from "&img/nat-8.jpg";
 import nat9 from "&img/nat-9.jpg";
 import vmp4 from "&img/video.mp4";
@@ -13,11 +14,11 @@ export const Stories = (props: StoryProps): JSX.Element => {
   return (
     <section className="section-stories">
       <VideoBackground sourceMP4={vmp4} sourceWEBM={vwebm} />
-      <div className="u-center-text u-margin-bottom-big">
-        <h2 className="heading-secondary" id="section-stories">
-          We make people genuinely happy
-        </h2>
-      </div>
+      <Heading
+        type="heading-secondary"
+        class="u-center-text u-margin-bottom-big"
+        text="We make people genuinely happy"
+      />
       <StoryCard
         img={{
           src: nat8,
@@ -48,7 +49,7 @@ export const Stories = (props: StoryProps): JSX.Element => {
         <Button
           class=" btn-text"
           label="Read all stories &rarr;"
-          to="#"
+          to="#section-booking"
         />
       </div>
     </section>

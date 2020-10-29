@@ -1,13 +1,16 @@
 import * as React from "react";
 import { Card } from "&tools/Card";
+import { Heading } from "&tools/Heading";
 import { Button } from "&components/Button";
 
 export const Tours = (): JSX.Element => {
   return (
     <section id="section-tours" className="section-tours">
-      <div className="u-center-text u-margin-bottom-big">
-        <h2 className="heading-secondary">Most Popular Tours</h2>
-      </div>
+      <Heading
+        type="heading-secondary"
+        class="u-center-text u-margin-bottom-big"
+        text="Most Popular Tours"
+      />
       <div className="row">
         <div className="col-1-of-3">
           <Card
