@@ -6,6 +6,7 @@ import { Features } from "&sections/Features";
 import { Tours } from "&sections/Tours";
 import { Stories } from "&sections/Stories/Stories";
 import { Booking } from "&sections/Booking";
+import { Footer } from "&components/Footer";
 
 interface Content {
   h1: string;
@@ -34,6 +35,7 @@ export const App = (): JSX.Element => {
         <Stories />
         <Booking />
       </main>
+      <Footer />
     </Router>
   );
 };
