@@ -20,7 +20,7 @@
     background-color: $color-white;
     color: $color-grey-dark;
 
-    &:after {
+    &::after {
       background-color: $color-white;
     }
   }
@@ -29,7 +29,7 @@
     background-color: $color-primary;
     color: $color-white;
 
-    &:after {
+    &::after {
       background-color: $color-primary;
     }
   }
@@ -47,10 +47,10 @@
   }
 
   &::after {
-    content: "";
-    display: inline-block;
-    height: 100%;
-    width: 100%;
+    content: ""; // Needed or else ::after element will not show up
+    display: inline-block; // same as parent
+    height: 100%; // ::after element acts as child, so inherits
+    width: 100%; // width and height from parent (btn elemenet)
     border-radius: 100px;
     position: absolute;
     top: 0;
