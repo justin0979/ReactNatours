@@ -6,13 +6,15 @@ export class Header extends React.Component {
   render(): JSX.Element {
     return (
       <header id="header" className="header">
-        <div className="header__logo-box">
-          <img
-            src={logoWhite}
-            alt="Logo"
-            className="header__logo"
-          />
-        </div>
+        <a href="#footer">
+          <div className="header__logo-box">
+            <img
+              src={logoWhite}
+              alt="Logo"
+              className="header__logo"
+            />
+          </div>
+        </a>
         <div className="header__text-box">
           <h1 className="heading-primary">
             <span className="heading-primary--main">Outdoors</span>

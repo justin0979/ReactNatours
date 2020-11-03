@@ -1,10 +1,13 @@
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
+import { Navigation } from "&components/Navigation";
 import { Header } from "./Header";
 import { About } from "&sections/About";
 import { Features } from "&sections/Features";
 import { Tours } from "&sections/Tours";
 import { Stories } from "&sections/Stories/Stories";
+import { Booking } from "&sections/Booking";
+import { Footer } from "&components/Footer";
 
 interface Content {
   h1: string;
@@ -25,13 +28,16 @@ const componentContent: Content = {
 export const App = (): JSX.Element => {
   return (
     <Router>
+      <Navigation />
       <Header />
       <main>
         <About />
         <Features />
         <Tours />
         <Stories />
+        <Booking />
       </main>
+      <Footer />
     </Router>
   );
 };
