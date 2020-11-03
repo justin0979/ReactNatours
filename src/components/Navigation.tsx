@@ -9,7 +9,7 @@ export const Navigation = (): JSX.Element => {
         className="navigation__checkbox"
       />
       <label htmlFor="navi-toggle" className="navigation__button">
-        MENU
+        <span className="navigation__icon"></span>
       </label>
       <div className="navigation__background">&nbsp;</div>
       <nav className="navigation__nav">
