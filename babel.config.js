@@ -22,6 +22,7 @@ module.exports = {
         root: ["./"],
         alias: {
           "&components": "./src/components",
+          "&data": "./src/data",
           "&img": "./src/img",
           "&sass": "./src/sass",
           "&sections": "./src/components/sections",
