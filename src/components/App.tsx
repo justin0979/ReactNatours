@@ -1,5 +1,4 @@
 import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
 import { Navigation } from "&components/Navigation";
 import { Header } from "./Header";
 import { About } from "&sections/About";
@@ -14,7 +13,7 @@ import { tourCards } from "&data/tourCards";
 
 export const App = (): JSX.Element => {
   return (
-    <Router>
+    <>
       <Popup />
       <Navigation />
       <Header />
@@ -26,6 +25,6 @@ export const App = (): JSX.Element => {
         <Booking />
       </main>
       <Footer />
-    </Router>
+    </>
   );
 };

@@ -1,11 +1,24 @@
 import * as React from "react";
 import logo from "&img/logo-green-2x";
+import logo1x from "&img/logo-green-1x";
+import logoGreenSm1x from "&img/logo-green-small-1x";
+import logoGreenSm2x from "&img/logo-green-small-2x";
 
 export const Footer = (): JSX.Element => {
   return (
     <footer id="footer" className="footer">
       <div className="footer__logo-box">
-        <img src={logo} alt="Full Logo" className="footer__logo" />
+        <picture className="footer__logo">
+          <source
+            srcSet={`${logoGreenSm1x} 1x, ${logoGreenSm2x} 2x`}
+            media="(max-width: 37.5rem)"
+          />
+          <img
+            srcSet={`${logo1x} 1x, ${logo} 2x`}
+            alt="Full Logo"
+            src={logo}
+          />
+        </picture>
       </div>
       <div className="row">
         <div className="col-1-of-2">
