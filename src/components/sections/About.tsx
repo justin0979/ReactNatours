@@ -51,21 +51,21 @@ export class About extends React.Component {
             <div className="composition">
               <img
                 srcSet={`${nat1sm} 300w, ${nat1} 1000w`}
-                sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
+                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
                 alt="Photo1"
                 className="composition__photo composition__photo--p1"
                 src={nat1}
               />
               <img
                 srcSet={`${nat2sm} 300w, ${nat2} 1000w`}
-                sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
+                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
                 alt="Photo 2"
                 className="composition__photo composition__photo--p2"
                 src={nat2}
               />
               <img
                 srcSet={`${nat3sm} 300w, ${nat3} 1000w`}
-                sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
+                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
                 alt="Photo 3"
                 className="composition__photo composition__photo--p3"
                 src={nat3}
