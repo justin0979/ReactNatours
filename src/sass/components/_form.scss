@@ -5,18 +5,25 @@
     }
   }
 
+  // input do not automatically inherit font properties,
+  // so they need to be inherited
   &__input {
     font-family: inherit; // inputs do not automatically inherit
     font-size: 1.5rem;
-    color: inherit;
+    color: inherit; // inputs do not automatically inherit
     padding: 1.5rem 2rem;
     border-radius: 2px;
     background-color: rgba($color-white, 0.5);
     border: none;
-    border-bottom: 3px solid transparent;
+    border-bottom: 3px solid transparent; // add so when focus,
+    // input does not shift by 3px when focused.
     width: 90%;
     display: block;
     transition: all 0.3s;
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
 
     &:focus {
       outline: none;
@@ -28,6 +35,8 @@
       }
     }
 
+    // pseudo element representing placeholder that is actually
+    // on the webpage.
     &::-webkit-input-placeholder {
       color: $color-grey-dark-2;
     }
@@ -36,21 +45,35 @@
   &__label {
     font-size: 1.2rem;
     font-weight: 700;
-    margin-left: 2rem;
-    margin-top: 0.7rem;
-    display: block;
+    margin-left: 2rem; // need dpplay: block;
+    margin-top: 0.7rem; // need display: block;
+    display: block; // need so that box-model props can be used.
     transition: all 0.3s;
   }
 
+  // + is the adjacent sibling selector
+  // with +, order in html code matters
+  // placeholder shown applies only if placeholder is shown on page.
+  // As soon as input is typed in, then the placeholder disappears.
   &__input:placeholder-shown + &__label {
-    opacity: 0;
+    opacity: 0; // opacity is used with visibility b/c visibility
+    // cannot be animated.
     visibility: hidden;
+    // label is originally after the input, but since input has
+    // display: block;, it takes up the line and the label is
+    // pushed to next line. The following transform moves the
+    // label into the input.
     transform: translateY(-4rem);
   }
 
   &__radio-group {
     width: 39%;
     display: inline-block;
+
+    @include respond(tab-port) {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
   }
 
   &__radio-input {

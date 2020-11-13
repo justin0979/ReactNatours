@@ -5,3 +5,61 @@
     clear: both; // clears both float left and float right
   }
 }
+
+// MEDIA QUERY MANAGER
+/* 
+0 - 600em:    Phone
+600 - 900em:  Tablet portrait
+900 - 1200em: Tablet lanscape
+[1200 - 1800] is where our normal styles apply
+1800em + :    Big Desktop
+*/
+/*
+One Example of using a mixin BUT below is more organized with if
+@mixin respond-phone {
+  @media (max-width: 600em) {
+    @content;
+  }
+}
+*/
+
+/*
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base 
+
+1em = 16px
+*/
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    // 600/16 = 37.5
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-port {
+    // 900 / 16 = 56.25
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-land {
+    // 1200 / 16 = 75
+    @media only screen and (max-width: 75em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == big-desktop {
+    // 1800 / 16 = 112.5
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    }
+  }
+}

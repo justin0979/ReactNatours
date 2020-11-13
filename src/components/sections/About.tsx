@@ -4,6 +4,9 @@ import { Heading } from "&tools/Heading";
 import nat1 from "&img/nat-1-large";
 import nat2 from "&img/nat-2-large";
 import nat3 from "&img/nat-3-large";
+import nat1sm from "&img/nat-1";
+import nat2sm from "&img/nat-2";
+import nat3sm from "&img/nat-3";
 
 export class About extends React.Component {
   render(): JSX.Element {
@@ -47,19 +50,25 @@ export class About extends React.Component {
           <div className="col-1-of-2">
             <div className="composition">
               <img
-                src={nat1}
-                alt="Photo 1"
+                srcSet={`${nat1sm} 300w, ${nat1} 1000w`}
+                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                alt="Photo1"
                 className="composition__photo composition__photo--p1"
+                src={nat1}
               />
               <img
-                src={nat2}
+                srcSet={`${nat2sm} 300w, ${nat2} 1000w`}
+                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
                 alt="Photo 2"
                 className="composition__photo composition__photo--p2"
+                src={nat2}
               />
               <img
-                src={nat3}
+                srcSet={`${nat3sm} 300w, ${nat3} 1000w`}
+                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
                 alt="Photo 3"
                 className="composition__photo composition__photo--p3"
+                src={nat3}
               />
             </div>
           </div>

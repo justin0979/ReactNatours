@@ -1,8 +1,8 @@
 import * as React from "react";
-import { Heading } from "./Heading";
 import { Button } from "&components/Button";
 
 export interface CardProps {
+  id?: string;
   class: {
     side: string;
     cardPicture: string;
@@ -17,6 +17,7 @@ export interface CardProps {
     sleep: string;
     difficulty: string;
   };
+  href: string;
   price: string;
 }
 
@@ -59,7 +60,7 @@ export const Card = (props: CardProps): JSX.Element => {
           </div>
           <Button
             label="Book Now"
-            to="#header"
+            to={`#${props.href}`}
             class={props.class.button}
           />
         </div>
