@@ -87,4 +87,9 @@
       color: $color-primary;
     }
   }
+
+  &__hide {
+    opacity: 0;
+    visibility: hidden;
+  }
 }

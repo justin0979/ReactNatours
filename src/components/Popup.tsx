@@ -1,17 +1,32 @@
 import * as React from "react";
+import { useState } from "react";
 import { Heading } from "&tools/Heading";
 import { Button } from "&components/Button";
 import nat8 from "&img/nat-8";
 import nat9 from "&img/nat-9";
 
 export const Popup = (): JSX.Element => {
+  const [close, setClose] = useState(false);
+
+  const handleClose = () => {
+    if (!close) {
+      console.log("close =", close);
+      setClose(!close);
+    } else {
+      return;
+    }
+  };
+
   return (
     <div
-      className="popup"
+      className={`popup ${close ? "popup__hide" : ""}`}
       id="popup"
-      onClick={(): void => console.log("Clicked")}
+      onClick={() => handleClose()}
     >
-      <div className="popup__content">
+      <div
+        onClick={(e) => e.stopPropagation()}
+        className="popup__content"
+      >
         <div className="popup__left">
           <img
             src={nat8}
